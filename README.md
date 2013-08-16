@@ -3,9 +3,9 @@ You are free to download/use/modify these codes for __non-commercial__ uses
 
 ###Contents:  
 1. in './sorts':
-> selectionsort.cpp
-> mergesort.cpp
-> quicksort.cpp  
+'selectionsort.cpp'
+'mergesort.cpp'
+'quicksort.cpp'  
   
 
 ###Usage:  
@@ -13,9 +13,9 @@ You are free to download/use/modify these codes for __non-commercial__ uses
 2. run the corresponding binary file  
 
 ###TODO:
-1. write insertionsort.cpp
-2. write heapsort.cpp
-3. write binarysearch.cpp  
+> 1. write insertionsort.cpp
+> 2. write heapsort.cpp
+> 3. write binarysearch.cpp  
 
 
 +           Git: fanfank
