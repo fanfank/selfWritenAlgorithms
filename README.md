@@ -2,14 +2,14 @@
 You are free to download/use/modify these codes for __non-commercial__ uses
 
 ###Contents:  
-1. in './sorts':
-'selectionsort.cpp'
-'mergesort.cpp'
-'quicksort.cpp'  
+1. in `./sorts`:
+`selectionsort.cpp`
+`mergesort.cpp`
+`quicksort.cpp`  
   
 
 ###Usage:  
-1. enter any directory and type 'make'
+1. enter any directory and type `make`
 2. run the corresponding binary file  
 
 ###TODO:
