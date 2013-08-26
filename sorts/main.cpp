@@ -36,6 +36,15 @@ int main()
             case 0:
                 selectionSort(b, begin, end);
                 break;
+            case 1:
+                insertionSort(b, begin, end);
+                break;
+            case 2:
+                bubbleSort(b, begin, end);
+                break;
+            case 3:
+                heapSort(b, begin, end);
+                break;
             case 4:
                 mergeSort(b, begin, end);
                 break;

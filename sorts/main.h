@@ -5,11 +5,7 @@
 #include "selectionsort.cpp"
 #include "quicksort.cpp"
 #include "mergesort.cpp"
+#include "heapsort.cpp"
+#include "bubblesort.cpp"
+#include "insertionsort.cpp"
 using namespace std;
-//template<typename Comparable>
-//void swap(Comparable &a, Comparable &b)
-//{
-    //Comparable tmp = a;
-    //a = b;
-    //b = tmp;
-//}

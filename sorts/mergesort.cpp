@@ -29,7 +29,7 @@ void mergeSort(Comparable a[], Comparable tmpArr[],
 template<typename Comparable>
 void mergeSort(Comparable a[], int left, int rightEnd)
 {
-    if(a == 0 || left < 0 || (rightEnd <= left + 1))
+    if(a == NULL || left < 0 || (rightEnd <= left + 1))
         return;
 
     Comparable *tmpArr = new Comparable[rightEnd - left];
