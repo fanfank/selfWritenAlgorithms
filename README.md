@@ -30,6 +30,6 @@ You are free to download/use/modify these codes for __non-commercial__ uses
     &copy; 2013 Reetsee.Xu
 </div>
 
-*README.md Last update: 20130816*
+*README.md Last update: 20130826*
 
 
