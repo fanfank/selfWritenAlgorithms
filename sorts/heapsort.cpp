@@ -1,23 +1,36 @@
 #include<algorithm>
 template<typename Comparable>
+void topDown(Comparable a[], Comparable next, int gap, int ed)
+{
+    int left, right;
+    while(true)
+    {
+        left = next * 2;
+        right = left + 1;
+        if(left < ed && a[next + gap] < a[left + gap])
+            next = left;
+        if(right < ed && a[next + gap] < a[right + gap])
+            next = right;
+
+        if(next == left / 2)
+            break;
+        
+        swap(a[next + gap], a[left / 2 + gap]);
+    }
+}
+
+template<typename Comparable>
 void heapify_max(Comparable a[], int begin, int end)
 {
     int gap = begin - 1;
     int bg = begin - gap;
-    int ed = end - 1 - gap;
-    int father, leftchild, biggest;
+    int ed = end - gap;
+    int next, left, right;
     for(int i = ed / 2; i >= bg; i--)
     {
-        biggest = father = i + gap;
-        leftchild = i * 2 + gap;
-        if(a[father] < a[leftchild])
-            biggest = leftchild;
-        if((leftchild + 1) < end && a[father] < a[leftchild + 1])
-            biggest = leftchild + 1;
-
-        if(biggest != father)
-            swap(a[father], a[biggest]);
+        topDown(a, i, gap, ed);
     }
+
 }
 
 template<typename Comparable>
@@ -25,26 +38,12 @@ void heapSort2(Comparable a[], int begin, int end)
 {
     int gap = begin - 1;
     int bg = begin - gap;
-    int ed = end - 1 - gap;
+    int ed = end - gap;
     int next, left, right;
-    for(; ed >= bg; )
+    for(; ed > bg; )
     {
-        swap(a[1 + gap], a[(ed--) + gap]);
-        next = bg;
-        while(true)
-        {
-            left = next * 2;
-            right = left + 1;
-            if(left <= ed && a[next + gap] < a[left + gap])
-                next = left;
-            if(right <= ed && a[next + gap] < a[right + gap])
-                next = right;
-
-            if(next == left / 2)
-                break;
-
-            swap(a[next + gap], a[left / 2 + gap]);
-        }
+        swap(a[bg + gap], a[(--ed) + gap]);
+        topDown(a, bg, gap, ed);
     }
 }
 

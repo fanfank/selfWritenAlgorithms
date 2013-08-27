@@ -1,11 +1,14 @@
 #include "main.h"
+int c[1000] = {
+    -1, 2, 9, -2, -1, 12, 0, 13, 10, 1, 2, 1, -1, 2, 8, 11, 15, -13, 7, 5
+};
 int main()
 {
     int a[1000];
     int b[1000];
     int n;
     for(int i = 19; i >= 0; i--)
-        a[19 - i] = i;
+        a[19 - i] = c[i];
 
     int s;
     cout<<"Please input # of array elements:";
@@ -22,8 +25,12 @@ int main()
         for(int i = 0; i < lastn; i++)
             b[i] = a[i];
 
+        cout<<"Before sorting:"<<endl;
+        for(int i = 0; i < lastn; i++)
+            cout<<b[i]<<" ";
+        cout<<endl;
 
-        cout<<"sorting algorithm do you want(0ss, 1is, 2bs, 3hs, 4ms, 5qs):";
+        cout<<"Which sorting algorithm do you want(0ss, 1is, 2bs, 3hs, 4ms, 5qs):";
         cin>>s;
 
         cout<<"where to begin:"; cin>>begin;
