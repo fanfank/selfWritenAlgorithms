@@ -1,0 +1,33 @@
+OBJS = *.o
+
+makeandclean: sort clean
+
+sort: bubblesort.o heapsort.o insertionsort.o mergesort.o quicksort.o selectionsort.o main.o
+	g++ -o $@ ${OBJS}
+
+bubblesort.o: bubblesort.cpp
+	g++ -c bubblesort.cpp
+
+heapsort.o: heapsort.cpp
+	g++ -c heapsort.cpp
+
+insertionsort.o: insertionsort.cpp
+	g++ -c insertionsort.cpp
+
+mergesort.o: mergesort.cpp
+	g++ -c mergesort.cpp
+
+quicksort.o: quicksort.cpp
+	g++ -c quicksort.cpp
+
+selectionsort.o: selectionsort.cpp
+	g++ -c selectionsort.cpp
+
+main.o: main.cpp main.h
+	g++ -c main.cpp
+
+clean:
+	-rm ${OBJS}
+
+cleanall:
+	-rm ${OBJS} sort

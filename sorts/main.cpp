@@ -30,7 +30,7 @@ int main()
             cout<<b[i]<<" ";
         cout<<endl;
 
-        cout<<"Which sorting algorithm do you want(0ss, 1is, 2bs, 3hs, 4ms, 5qs):";
+        cout<<"Which sorting algorithm do you want(0ss, 1is, 2bs, 3hs, 4ms, 5qs, 6ssV2, 7msV2, 8qsV2):";
         cin>>s;
 
         cout<<"where to begin:"; cin>>begin;
@@ -57,6 +57,15 @@ int main()
                 break;
             case 5:
                 quickSort(b, begin, end);
+                break;
+            case 6:
+                _selectionSort(b, begin, end);
+                break;
+            case 7:
+                _mergeSort(b, begin, end);
+                break;
+            case 8:
+                _quickSort(b, begin, end);
                 break;
             default:
                 break;

@@ -20,12 +20,11 @@ void topDown(Comparable a[], Comparable next, int gap, int ed)
 }
 
 template<typename Comparable>
-void heapify_max(Comparable a[], int begin, int end)
+void heapify_max(Comparable a[], int left, int rightp1)
 {
-    int gap = begin - 1;
-    int bg = begin - gap;
-    int ed = end - gap;
-    int next, left, right;
+    int gap = left - 1;
+    int bg = left - gap;
+    int ed = rightp1 - gap;
     for(int i = ed / 2; i >= bg; i--)
     {
         topDown(a, i, gap, ed);
@@ -34,12 +33,11 @@ void heapify_max(Comparable a[], int begin, int end)
 }
 
 template<typename Comparable>
-void heapSort2(Comparable a[], int begin, int end)
+void heapSort2(Comparable a[], int left, int rightp1)
 {
-    int gap = begin - 1;
-    int bg = begin - gap;
-    int ed = end - gap;
-    int next, left, right;
+    int gap = left - 1;
+    int bg = left - gap;
+    int ed = rightp1 - gap;
     for(; ed > bg; )
     {
         swap(a[bg + gap], a[(--ed) + gap]);
@@ -48,10 +46,10 @@ void heapSort2(Comparable a[], int begin, int end)
 }
 
 template<typename Comparable>
-void heapSort(Comparable a[], int begin, int end)
+void heapSort(Comparable a[], int left, int rightp1)
 {
-    if(a == NULL || begin < 0 || (begin + 1) >= end)
+    if(a == NULL || left < 0 || (left + 1) >= rightp1)
         return;
-    heapify_max(a, begin, end) ;
-    heapSort2(a, begin, end);
+    heapify_max(a, left, rightp1) ;
+    heapSort2(a, left, rightp1);
 }

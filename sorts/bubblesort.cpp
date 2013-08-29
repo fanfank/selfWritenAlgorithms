@@ -1,11 +1,14 @@
+#ifndef NULL
+#define NULL 0
+#endif
 template<typename Comparable>
-void bubbleSort(Comparable a[], int begin, int end)
+void bubbleSort(Comparable a[], int left, int rightp1)
 {
-    if(a == NULL || begin < 0 || (begin + 1) >= end)
+    if(a == NULL || left < 0 || (left + 1) >= rightp1)
         return;
-    while(end-- > begin)
+    while(rightp1-- > left)
     {
-        for(int i = begin; i < end; i++)
+        for(int i = left; i < rightp1; i++)
             if(a[i] > a[i + 1])
                 swap(a[i], a[i + 1]);
     }

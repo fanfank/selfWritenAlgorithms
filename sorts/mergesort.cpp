@@ -1,3 +1,6 @@
+#ifndef NULL
+#define NULL 0
+#endif
 template<typename Comparable>
 void mergeSort(Comparable a[], Comparable tmpArr[],
         int left, int right)
@@ -27,14 +30,14 @@ void mergeSort(Comparable a[], Comparable tmpArr[],
 }
 
 template<typename Comparable>
-void mergeSort(Comparable a[], int left, int rightEnd)
+void mergeSort(Comparable a[], int left, int rightp1)
 {
-    if(a == NULL || left < 0 || (rightEnd <= left + 1))
+    if(a == NULL || left < 0 || (rightp1 <= left + 1))
         return;
 
-    Comparable *tmpArr = new Comparable[rightEnd - left];
+    Comparable *tmpArr = new Comparable[rightp1 - left];
 
-    mergeSort(a, tmpArr, left, rightEnd - 1);
+    mergeSort(a, tmpArr, left, rightp1 - 1);
     delete []tmpArr;
 }
 
