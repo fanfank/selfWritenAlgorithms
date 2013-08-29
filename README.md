@@ -2,13 +2,13 @@
 You are free to download/use/modify these codes for __non-commercial__ uses
 
 ###Contents:  
-1. in `./sorts`:
+1. in `./sorts`:  
 `selectionsort.cpp`
 `insertionsort.cpp`
 `bubblesort.cpp`
 `heapsort.cpp`
 `mergesort.cpp`
-`quicksort.cpp`  
+`quicksort.cpp`
 `selectionsortV2.cpp`
 `mergesortV2.cpp`
 `quicksortV2.cpp`
