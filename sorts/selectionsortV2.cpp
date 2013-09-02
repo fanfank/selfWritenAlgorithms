@@ -1,3 +1,6 @@
+#ifndef NULL
+#define NULL 0
+#endif
 template<typename Comparable>
 int _selectionSort(Comparable a[], int left, int rightp1)
 {

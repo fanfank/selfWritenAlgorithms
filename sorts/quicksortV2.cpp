@@ -1,3 +1,6 @@
+#ifndef NULL
+#define NULL 0
+#endif
 template<typename Comparable>
 Comparable _selectFrom3(Comparable &l, Comparable &m, Comparable &r)
 {

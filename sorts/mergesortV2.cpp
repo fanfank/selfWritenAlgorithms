@@ -1,3 +1,6 @@
+#ifndef NULL
+#define NULL 0
+#endif
 template<typename Comparable>
 void _mergeSort(Comparable a[], Comparable tmp[], int left, int rightp1)
 {

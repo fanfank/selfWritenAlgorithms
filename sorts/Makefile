@@ -1,9 +1,23 @@
-OBJS = *.o
+CC = g++
+CPPS = $(wildcard *.cpp)
+OBJS = main.o quicksort.o mergesort.o selectionsort.o heapsort.o insertionsort.o bubblesort.o selectionsortV2.o mergesortV2.o quicksortV2.o
+CFLAGS = -g
 
-makeandclean: sort
+sort: $(CPPS)
+	$(CC) -o $@ main.cpp
 
-sort: main.h main.cpp quicksort.cpp mergesort.cpp selectionsort.cpp heapsort.cpp insertionsort.cpp bubblesort.cpp
-	g++ -o $@ main.cpp
+main.cpp: main.h
+
+
+debug: $(OBJS)
+	$(CC) $(CFLAGS) -o sort_debug $^
+
+$(OBJS): %.o: %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	-rm $(OBJS)
 
 cleanall:
-	-rm sort
+	-rm sort* $(OBJS)
+
