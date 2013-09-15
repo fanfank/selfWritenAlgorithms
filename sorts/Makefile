@@ -9,7 +9,7 @@ sort: $(CPPS)
 main.cpp: main.h
 
 
-debug: $(OBJS)
+debug: $(OBJS) main.h
 	$(CC) $(CFLAGS) -o sort_debug $^
 
 $(OBJS): %.o: %.cpp

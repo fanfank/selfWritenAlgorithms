@@ -47,7 +47,7 @@ void _quickSort2(Comparable a[], int left, int right)
 template<typename Comparable>
 int _quickSort(Comparable a[], int left, int rightp1)
 {
-    if(a == NULL || left < 0 || (left + 1) >= rightp1)
+    if(a == NULL || left < 0 || (left + 1) > rightp1)
         return -1;
 
     _quickSort2(a, left, rightp1 - 1);

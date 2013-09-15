@@ -31,7 +31,7 @@ void _mergeSort(Comparable a[], Comparable tmp[], int left, int rightp1)
 template<typename Comparable>
 int _mergeSort(Comparable a[], int left, int rightp1)
 {
-    if(a == NULL || left < 0 || (left + 1) >= rightp1)
+    if(a == NULL || left < 0 || (left + 1) > rightp1)
         return -1;
 
     Comparable *tmp = new Comparable[rightp1 - left];

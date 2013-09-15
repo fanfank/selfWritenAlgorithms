@@ -4,7 +4,7 @@
 template<typename Comparable>
 int _selectionSort(Comparable a[], int left, int rightp1)
 {
-    if(a == NULL || left < 0 || (left + 1) >= rightp1)
+    if(a == NULL || left < 0 || (left + 1) > rightp1)
         return -1;
 
     int min_index;
