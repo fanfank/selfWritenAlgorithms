@@ -29,6 +29,7 @@ void testTemplate(R (*func)(T*, int, int))
 template<typename T, typename R, R (*func)(T*, int, int) >
 void autoTest(int len)
 {
+    cout<<"Every dot \".\" means 50 test cases"<<endl;
     time_t bg_time,ed_time;
     bg_time = time(NULL);
     int cnt = 10000;
@@ -36,6 +37,11 @@ void autoTest(int len)
     int *arr2 = new int[len];
     while(cnt--)
     {
+        if(cnt % 50 == 0)
+        {
+            cout<<".";
+            fflush(stdout);
+        }
         for(int i = 0; i < len; i++)
             arr1[i] = arr2[i] = ((int)rand()) % MAX;
         func(arr1, 0, len);
@@ -54,6 +60,7 @@ void autoTest(int len)
 
     }
     ed_time = time(NULL) ;
+    cout<<endl;
     cout<<"Cost "<<ed_time - bg_time<<" seconds"<<endl;
     delete []arr1;
     delete []arr2;
@@ -75,7 +82,7 @@ int main()
         //testTemplate<int, void>(selectionSort);
         if(n <= 0)
         {
-            n = lastn;
+            //n = lastn;
         }
         else
             lastn = n;
@@ -92,8 +99,11 @@ int main()
 
         if(!am)
         {
+            if(n > 0)
             for(int i = 0; i < lastn; i++)
                 cin>>a[i];
+            else
+                n = lastn;
 
             for(int i = 0; i < lastn; i++)
                 b[i] = a[i];

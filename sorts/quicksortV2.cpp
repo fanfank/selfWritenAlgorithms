@@ -2,23 +2,23 @@
 #define NULL 0
 #endif
 template<typename Comparable>
-Comparable _selectFrom3(Comparable &l, Comparable &m, Comparable &r)
+void _selectFrom3(Comparable &l, Comparable &m, Comparable &r)
 {
     if(r < l) swap(r, l);
     if(m < l) swap(m, l);
     if(m < r) swap(m, r);
-    return r;
 }
 
 template<typename Comparable>
 int _partition(Comparable a[], int left, int right)
 {
-    int pivot = _selectFrom3(a[left], a[left + (right - left)/2], a[right]);
+    _selectFrom3(a[left], a[left + (right - left)/2], a[right]);
+    int pivot = right;
     int lpos = left, rpos = right;
     while(1) //Compatible with C code, no "true"
     {
-        while(a[++lpos] < pivot);
-        while(a[--rpos] > pivot);
+        while(a[++lpos] < a[pivot]);
+        while(a[--rpos] > a[pivot]);
 
         if(lpos < rpos)
             swap(a[lpos], a[rpos]);
@@ -26,7 +26,7 @@ int _partition(Comparable a[], int left, int right)
             break;
     }
     
-    swap(a[lpos], a[right]);
+    swap(a[lpos], a[pivot]);
     return lpos;
 }
 
@@ -47,7 +47,7 @@ void _quickSort2(Comparable a[], int left, int right)
 template<typename Comparable>
 int _quickSort(Comparable a[], int left, int rightp1)
 {
-    if(a == NULL || left < 0 || (left + 1) > rightp1)
+    if(a == NULL || left < 0 || left >= rightp1)
         return -1;
 
     _quickSort2(a, left, rightp1 - 1);

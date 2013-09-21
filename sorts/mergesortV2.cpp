@@ -13,7 +13,7 @@ void _mergeSort(Comparable a[], Comparable tmp[], int left, int rightp1)
 
     int lpos = left;
     int rpos = middle;
-    int tpos = left;
+    int tpos = 0;
 
     while(lpos < middle && rpos < rightp1)
         if(a[lpos] < a[rpos])
@@ -24,8 +24,8 @@ void _mergeSort(Comparable a[], Comparable tmp[], int left, int rightp1)
     while(lpos < middle)
         tmp[tpos++] = a[lpos++];
 
-    while(tpos-- > left)
-        a[tpos] = tmp[tpos];
+    while(tpos--)
+        a[--rpos] = tmp[tpos];
 }
 
 template<typename Comparable>
