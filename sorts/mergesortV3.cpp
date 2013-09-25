@@ -24,7 +24,7 @@ void __mergeSort(T a[], T helper[], int left, int rightp1)
 template<typename T>
 int __mergeSort(T a[], int left, int rightp1)
 {
-    if(a == NULL || left < 0 || left >= rightp1)
+    if(a == 0 || left < 0 || left >= rightp1)
         return -1;
     T *helper = new T[rightp1 - left];
     __mergeSort(a, helper, left, rightp1);

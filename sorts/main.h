@@ -16,5 +16,6 @@
 #include "quicksortV2.cpp"
 #include "mergesortV3.cpp"
 #include "quicksortV3.cpp"
+#include "heapsortV2.cpp"
 #define MAX 0x7fffffff
 using namespace std;

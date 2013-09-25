@@ -1,6 +1,6 @@
 CC = g++
 CPPS = $(wildcard *.cpp)
-OBJS = main.o quicksort.o mergesort.o selectionsort.o heapsort.o insertionsort.o bubblesort.o selectionsortV2.o mergesortV2.o quicksortV2.o quicksortV3.o
+OBJS = main.o quicksort.o mergesort.o selectionsort.o heapsort.o insertionsort.o bubblesort.o selectionsortV2.o mergesortV2.o quicksortV2.o quicksortV3.o mergesortV3.o heapsortV2.o
 CFLAGS = -g
 
 sort: $(CPPS)
