@@ -14,5 +14,7 @@
 #include "insertionsort.cpp"
 #include "mergesortV2.cpp"
 #include "quicksortV2.cpp"
+#include "mergesortV3.cpp"
+#include "quicksortV3.cpp"
 #define MAX 0x7fffffff
 using namespace std;

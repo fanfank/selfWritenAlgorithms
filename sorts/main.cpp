@@ -87,7 +87,7 @@ int main()
         else
             lastn = n;
 
-        cout<<"Which sorting algorithm do you want(0ss, 1is, 2bs, 3hs, 4ms, 5qs, 6ssV2, 7msV2, 8qsV2):";
+        cout<<"Which sorting algorithm do you want(0ss, 1is, 2bs, 3hs, 4ms, 5qs, 6ssV2, 7msV2, 8qsV2, 9msV3, 10qsV3):";
         cin>>s;
 
         char amc;
@@ -173,7 +173,19 @@ int main()
                 if(am)
                     autoTest<int, int, _quickSort >(n);
                 else
-                _quickSort(b, begin, end);
+                    _quickSort(b, begin, end);
+                break;
+            case 9:
+                if(am)
+                    autoTest<int, int, __mergeSort >(n);
+                else
+                    __mergeSort(b, begin, end);
+                break;
+            case 10:
+                if(am)
+                    autoTest<int, int, __quickSort >(n);
+                else
+                    __quickSort(b, begin, end);
                 break;
             default:
                 break;

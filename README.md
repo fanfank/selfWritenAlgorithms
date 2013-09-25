@@ -12,6 +12,8 @@ You are free to download/use/modify these codes for __non-commercial__ uses
 `selectionsortV2.cpp`
 `mergesortV2.cpp`
 `quicksortV2.cpp`
+`mergesortV3.cpp`
+`quicksortV3.cpp`
   
 
 ###Usage:  
